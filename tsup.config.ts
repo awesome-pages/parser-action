@@ -14,4 +14,5 @@ export default defineConfig({
   dts: false,
   treeshake: true,
   platform: "node",
+  noExternal: [/.*/], // Bundle all dependencies for GitHub Actions
 });
