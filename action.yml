@@ -1,0 +1,34 @@
+name: "Awesome Pages Parser"
+description: "Run @awesome-pages/parser to generate domain/index/bookmarks/etc. artifacts from Markdown sources"
+author: "Awesome Pages"
+
+branding:
+  icon: "file-text"
+  color: "orange"
+
+inputs:
+  sources:
+    description: "YAML or JSON array of SourceSpec objects with 'from' and 'outputs' properties"
+    required: true
+  github-token:
+    description: "GitHub token for accessing private repositories or increasing rate limits (use secrets.GITHUB_TOKEN)"
+    required: false
+  strict:
+    description: "Enable strict mode to fail-fast on parsing inconsistencies (true/false)"
+    required: false
+    default: "false"
+  concurrency:
+    description: "Maximum number of parallel parsing operations"
+    required: false
+  root-dir:
+    description: "Base directory for resolving local globs and {dir} placeholder"
+    required: false
+    default: "."
+
+outputs:
+  files:
+    description: "JSON stringified array of generated files (ParseResultFile[])"
+
+runs:
+  using: "node20"
+  main: "dist/index.cjs"
