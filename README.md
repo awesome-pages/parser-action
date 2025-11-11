@@ -5,7 +5,7 @@ A GitHub Action that parses awesome-style README.md files into structured artifa
 ## Features
 
 - 📦 Parse awesome lists from **local files**, **GitHub repositories**, or **HTTP URLs**
-- 🎯 Generate multiple artifact types: `domain`, `index`, `bookmarks`, `sitemap`, `rss-json`, `rss-xml`
+- 🎯 Generate multiple artifact types: `domain`, `index`, `bookmarks`, `sitemap`, `rss-json`, `rss-xml`, `csv`
 - 🔧 Flexible placeholder-based output paths
 - ⚡ Configurable concurrency for parallel parsing
 - 🔒 Support for private repositories via GitHub tokens
